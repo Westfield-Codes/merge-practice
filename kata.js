@@ -11,6 +11,15 @@
 // Define a function called askFive and call it from inside main().
 // Define a function called askQuestion and call it from inside askFive() as askQuestion(1)
 
+/* main calls askFive, stores return value in score.
+ * Provides overall feedback based on score: perfect or number of errors.
+ * @param: none
+ * @return: none
+ */
+// Define variable score, set to return value of askFive()
+// If score = 0, display "Perfect!"
+// Otherwise, display "You had SCORE errors". 
+
 /* askFive calls askQuestion five times, counting and returning number wrong
  * @param: none
  * @return: score (0-5)
