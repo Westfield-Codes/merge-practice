@@ -44,11 +44,33 @@ function askQuestion(question){
     let b = Math.floor(Math.random()*7)+3;
     let product = a*b;
     let equation = a + " * " + b + " = ?";
+   
+
+function askQuestion(question){
+    let wrong = 0;
+    let a = Math.floor(Math.random()*7)+3;
+    let b = Math.floor(Math.random()*7)+3;
+    let product = a*b;
+    let equation = a + " * " + b + " = ?";
+    let answer = 0;
+    while (answer != product && answer != "q"){
+        answer = prompt(equation);
+        if (answer == "q"){
+            alert("Quitter!");
+            wrong = 2;
+        }
+        else if (answer == product) alert("Correct!");
+        else {
+            alert("Incorrect");
+            wrong = 1;   
+        } 
     let answer = prompt(equation);
     if (answer == "q"){
         alert("Quitter!");
         return 2;
     }
+    return wrong;
+}
     else if (answer == product) {
         alert("Correct!");
         return 0;
