@@ -40,21 +40,23 @@ function askFive() {
  * @return: integer (0 or 1)
  */
 function askQuestion(question){
+    let wrong = 0
     let a = Math.floor(Math.random()*7)+3;
     let b = Math.floor(Math.random()*7)+3;
     let product = a*b;
-    let equation = a + " * " + b + " = ?";
-    let answer = prompt(equation);
-    if (answer == "q"){
-        alert("Quitter!");
-        return 2;
+    let equation = question + ":" + a + " * " + b + " = ?";
+    let answer = 0;
+    while (answer!=product && "q") {
+        answer = prompt(equation);
+        if (answer == "q"){
+            alert("Quitter!");
+            wrong = 1;
+        }
+        else if (answer == product) alert("Correct!");
+        else {
+            alert("Incorrect");
+            wrong = 1   
+        } 
     }
-    else if (answer == product) {
-        alert("Correct!");
-        return 0;
-    }
-    else {
-        alert("Incorrect");
-        return 1;   
-    } 
+    return wrong;
 }
