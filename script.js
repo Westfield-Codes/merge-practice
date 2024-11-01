@@ -54,7 +54,7 @@ function askQuestion(question){
         }
         else if (answer == product) alert("Correct!");
         else {
-            alert("incorrect");
+            alert("Incorrect");
             wrong = 1;   
         } 
     }
