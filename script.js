@@ -45,11 +45,7 @@ function askQuestion(question){
     let product = a*b;
     let equation = a + " * " + b + " = ?";
     let answer = prompt(equation);
-    if (answer == "q"){
-        alert("Quitter!");
-        return 2;
-    }
-    else if (answer == product) {
+    if (answer == product) {
         alert("Correct!");
         return 0;
     }
